@@ -1,5 +1,8 @@
 <input [(ngModel)]="newTodoItem" placeholder="Write todos..." />
 <button (click)="addTodos(newTodoItem)">Add</button>
 <ul>
-  <li *ngFor="let item of todos">{{ item.title }}</li>
+  <li *ngFor="let item of todos; index as i">
+    {{ item.title }}
+    <button (click)="deleteTodo(i)">Delete</button>
+  </li>
 </ul>

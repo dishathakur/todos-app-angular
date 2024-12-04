@@ -34,4 +34,8 @@ export class TodoListComponent {
     this.todos.push(newTodo);
     this.newTodoItem = '';
   };
+
+  deleteTodo = (index: number) => {
+    this.todos.splice(index, 1);
+  };
 }
